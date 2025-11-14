@@ -22,43 +22,43 @@ Here is a simple example which would add a
 */
 
 
-function getEndpointsfpppluginZeroTier() {
+function getEndpointsZeroTierFppPlugin() {
     $result = array();
 
     $ep = array(
         'method' => 'GET',
         'endpoint' => 'info',
-        'callback' => 'fpppluginZeroTierInfo');
+        'callback' => 'ZeroTierFppPluginInfo');
     array_push($result, $ep);
 
     $ep = array(
         'method' => 'GET',
         'endpoint' => 'networks',
-        'callback' => 'fpppluginZeroTierNetworks');
+        'callback' => 'ZeroTierFppPluginNetworks');
     array_push($result, $ep);
 
     $ep = array(
         'method' => 'POST',
         'endpoint' => 'join',
-        'callback' => 'fpppluginZeroTierJoin');
+        'callback' => 'ZeroTierFppPluginJoin');
     array_push($result, $ep);
 
         $ep = array(
             'method' => 'POST',
             'endpoint' => 'leave',
-            'callback' => 'fpppluginZeroTierLeave');
+            'callback' => 'ZeroTierFppPluginLeave');
         array_push($result, $ep);
 
         $ep = array(
             'method' => 'GET',
             'endpoint' => 'check-update',
-            'callback' => 'fpppluginZeroTierCheckUpdate');
+            'callback' => 'ZeroTierFppPluginCheckUpdate');
         array_push($result, $ep);
 
         $ep = array(
             'method' => 'POST',
             'endpoint' => 'update',
-            'callback' => 'fpppluginZeroTierUpdate');
+            'callback' => 'ZeroTierFppPluginUpdate');
         array_push($result, $ep);
 
         return $result;
@@ -87,15 +87,15 @@ function runShownetScript($action, $networkId = null) {
     if (isset($settings) && isset($settings['pluginDirectory'])) {
         $pluginDir = $settings['pluginDirectory'];
         // Try with plugin name subdirectory (standard FPP structure)
-        $pluginPaths[] = $pluginDir . '/fpp-plugin-ZeroTier/scripts/shownet.sh';
+        $pluginPaths[] = $pluginDir . '/ZeroTier-FppPlugin/scripts/shownet.sh';
         // Also try directly in pluginDirectory (if pluginDirectory already points to plugin folder)
         $pluginPaths[] = $pluginDir . '/scripts/shownet.sh';
     }
     
     // Try FPP plugin directory structure (common locations)
-    $pluginPaths[] = '/home/fpp/media/plugins/fpp-plugin-ZeroTier/scripts/shownet.sh';
-    $pluginPaths[] = '/opt/fpp/media/plugins/fpp-plugin-ZeroTier/scripts/shownet.sh';
-    $pluginPaths[] = '/media/fpp/plugins/fpp-plugin-ZeroTier/scripts/shownet.sh';
+    $pluginPaths[] = '/home/fpp/media/plugins/ZeroTier-FppPlugin/scripts/shownet.sh';
+    $pluginPaths[] = '/opt/fpp/media/plugins/ZeroTier-FppPlugin/scripts/shownet.sh';
+    $pluginPaths[] = '/media/fpp/plugins/ZeroTier-FppPlugin/scripts/shownet.sh';
     
     // Check plugin directory paths first (for local dev and FPP)
     foreach ($pluginPaths as $path) {
@@ -180,8 +180,8 @@ function runZerotierCLI($command) {
     return array('output' => $output, 'return' => $return_var, 'command' => $fullCommand);
 }
 
-// GET /api/plugin/fpp-plugin-ZeroTier/info
-function fpppluginZeroTierInfo() {
+// GET /api/plugin/ZeroTier-FppPlugin/info
+function ZeroTierFppPluginInfo() {
     $result = array();
     $nodeInfo = runZerotierCLI("info");
     
@@ -268,8 +268,8 @@ function fpppluginZeroTierInfo() {
     return json($result);
 }
 
-// GET /api/plugin/fpp-plugin-ZeroTier/networks
-function fpppluginZeroTierNetworks() {
+// GET /api/plugin/ZeroTier-FppPlugin/networks
+function ZeroTierFppPluginNetworks() {
     $result = array();
     $networkList = runZerotierCLI("listnetworks");
     
@@ -321,8 +321,8 @@ function fpppluginZeroTierNetworks() {
     return json($result);
 }
 
-// POST /api/plugin/fpp-plugin-ZeroTier/join
-function fpppluginZeroTierJoin() {
+// POST /api/plugin/ZeroTier-FppPlugin/join
+function ZeroTierFppPluginJoin() {
     $result = array();
     
     // Handle both form data and JSON POST data
@@ -402,8 +402,8 @@ function fpppluginZeroTierJoin() {
     return json($result);
 }
 
-// POST /api/plugin/fpp-plugin-ZeroTier/leave
-function fpppluginZeroTierLeave() {
+// POST /api/plugin/ZeroTier-FppPlugin/leave
+function ZeroTierFppPluginLeave() {
     $result = array();
     
     // Handle both form data and JSON POST data
@@ -483,18 +483,18 @@ function fpppluginZeroTierLeave() {
     return json($result);
     }
 
-    // GET /api/plugin/fpp-plugin-ZeroTier/check-update
-    function fpppluginZeroTierCheckUpdate() {
+    // GET /api/plugin/ZeroTier-FppPlugin/check-update
+    function ZeroTierFppPluginCheckUpdate() {
         $result = array();
         
-        // Get current version using the same parsing logic as fpppluginZeroTierInfo
+        // Get current version using the same parsing logic as ZeroTierFppPluginInfo
         $nodeInfo = runZerotierCLI("info");
         $currentVersion = '';
         
         if ($nodeInfo['return'] == 0 && !empty($nodeInfo['output'])) {
             $infoLine = trim(implode(' ', $nodeInfo['output'])); // Join all output lines
             
-            // Use the same regex pattern as fpppluginZeroTierInfo to extract version
+            // Use the same regex pattern as ZeroTierFppPluginInfo to extract version
             if (preg_match('/(\d+)\s+info\s+([0-9a-f]{10})\s+([0-9.]+(?:-[0-9]+)?)\s+(\w+)/i', $infoLine, $matches)) {
                 $currentVersion = $matches[3]; // Version is in capture group 3
             }
@@ -575,8 +575,8 @@ function fpppluginZeroTierLeave() {
         return json($result);
     }
 
-    // POST /api/plugin/fpp-plugin-ZeroTier/update
-    function fpppluginZeroTierUpdate() {
+    // POST /api/plugin/ZeroTier-FppPlugin/update
+    function ZeroTierFppPluginUpdate() {
         $result = array();
         
         $os = php_uname('s');

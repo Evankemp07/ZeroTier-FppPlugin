@@ -1,7 +1,7 @@
 <?php
 // ZeroTier Network Configuration Page
 
-$pluginName = "fpp-plugin-ZeroTier";
+$pluginName = "ZeroTier-FppPlugin";
 $pluginPath = $settings['pluginDirectory'] . "/" . $pluginName;
 
 // Get initial data via API (for initial page load, we'll use PHP to get node info)
@@ -72,7 +72,7 @@ $nodeInfo = array();
 
 <script>
 (function() {
-    const API_BASE = '/api/plugin/fpp-plugin-ZeroTier';
+    const API_BASE = '/api/plugin/ZeroTier-FppPlugin';
     
     // Utility function to show messages
     function showMessage(message, type) {

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# fpp-plugin-ZeroTier install script
+# ZeroTier-FppPlugin install script
 
 # Include common scripts functions and variables
 . ${FPPDIR}/scripts/common
 
-PLUGIN_DIR="${MEDIADIR}/plugins/fpp-plugin-ZeroTier"
+PLUGIN_DIR="${MEDIADIR}/plugins/ZeroTier-FppPlugin"
 
 # Install ZeroTier if not already installed
 if ! command -v zerotier-cli >/dev/null 2>&1; then

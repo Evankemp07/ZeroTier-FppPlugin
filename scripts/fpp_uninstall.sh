@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# fpp-plugin-ZeroTier uninstall script
+# ZeroTier-FppPlugin uninstall script
 
 # Include common scripts functions and variables
 . ${FPPDIR}/scripts/common
 
-PLUGIN_DIR="${MEDIADIR}/plugins/fpp-plugin-ZeroTier"
+PLUGIN_DIR="${MEDIADIR}/plugins/ZeroTier-FppPlugin"
 
 # Set flag to run uninstall non-interactively
 export FPP_UNINSTALL=1
