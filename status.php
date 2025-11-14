@@ -2,7 +2,7 @@
 // ZeroTier Network Management Page (Combined Status & Configuration)
 
 // Use $plugin if set by FPP, otherwise use default
-$pluginName = isset($plugin) ? $plugin : "fpp-plugin-ZeroTier";
+$pluginName = isset($plugin) ? $plugin : "ZeroTier-FppPlugin";
 
 // Handle FPP plugin context - check if $settings exists
 if (!isset($settings) || !isset($settings['pluginDirectory'])) {
@@ -262,7 +262,7 @@ if (file_exists($cssFile)) {
 
 <script>
 (function() {
-    const API_BASE = '/api/plugin/fpp-plugin-ZeroTier';
+    const API_BASE = '/api/plugin/ZeroTier-FppPlugin';
     
     // Toggle debug section
     window.toggleDebug = function() {

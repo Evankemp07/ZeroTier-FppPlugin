@@ -1,4 +1,4 @@
-# fpp-plugin-ZeroTier
+# ZeroTier-FppPlugin
 
 ZeroTier Network Manager plugin for FPP (Falcon Player).
 
