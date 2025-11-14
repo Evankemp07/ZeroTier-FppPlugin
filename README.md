@@ -16,8 +16,8 @@ This plugin provides ZeroTier network management capabilities for FPP, allowing 
 
 1. Install the plugin through the FPP Plugin Manager
 2. The plugin will automatically install ZeroTier if needed
-3. Go to **Status → ZeroTier - Status** to view your node information
-4. Go to **Status → ZeroTier - Configuration** to join networks
+3. Open the plugin to view your node information
+4. Enter a network id to join networks
 
 ## Usage
 
@@ -47,8 +47,3 @@ shownet leave     # Leave a network (will prompt for Network ID)
 - [ZeroTier Website](https://www.zerotier.com/)
 - [ZeroTier Central](https://accounts.zerotier.com/realms/zerotier/protocol/openid-connect/auth?client_id=central-v2)
 - [ZeroTier Documentation](https://docs.zerotier.com/)
-
-## License
-
-See LICENSE file for details.
-
