@@ -17,9 +17,24 @@ if (!isset($settings) || !isset($settings['pluginDirectory'])) {
 }
 
 $pluginPath = $settings['pluginDirectory'] . "/" . $pluginName;
+// Use relative path for CSS - works in both local dev and production
+$cssPath = "styles.css";
 ?>
 
 <style>
+<?php
+// Embed CSS directly
+$cssFile = $pluginPath . '/styles.css';
+if (file_exists($cssFile)) {
+    readfile($cssFile);
+} else {
+    // Fallback: try relative path
+    $cssFile = dirname(__FILE__) . '/styles.css';
+    if (file_exists($cssFile)) {
+        readfile($cssFile);
+    }
+}
+?>
     .zt-container {
         max-width: 100% !important;
         width: 100% !important;
