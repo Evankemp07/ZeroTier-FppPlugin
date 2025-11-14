@@ -9,8 +9,8 @@
 	"allowUpdates": 1,
 	"versions": [
 		{
-			"minFPPVersion": "7.0",
-			"maxFPPVersion": "9.3",
+			"minFPPVersion": "9",
+			"maxFPPVersion": "0",
 			"branch": "master",
 			"sha": "",
 			"dependencies": {
