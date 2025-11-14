@@ -1,0 +1,614 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.zt-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.zt-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zt-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.zt-card-header {
+    background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+    color: white;
+    padding: 24px 28px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+}
+
+.zt-card-body {
+    padding: 32px 28px;
+}
+
+.zt-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0 0 24px 0;
+    letter-spacing: -0.3px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+}
+
+.zt-section-title:not(:first-child) {
+    margin-top: 48px;
+}
+
+.zt-subsection-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 24px 0 12px 0;
+    letter-spacing: -0.2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+}
+
+.zt-subsection-title-small {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 20px 0 10px 0;
+    letter-spacing: -0.1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+}
+
+.zt-alert {
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.47;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+    transition: opacity 0.5s ease, transform 0.5s ease, margin-top 0.5s ease;
+}
+
+.zt-alert-success {
+    background-color: #f0f9f4;
+    color: #1d7a3d;
+    border: 1px solid #d1ead9;
+}
+
+.zt-alert-error {
+    background-color: #fff5f5;
+    color: #d1242f;
+    border: 1px solid #ffd1d1;
+}
+
+.zt-alert-warning {
+    background-color: #fffbf0;
+    color: #b95000;
+    border: 1px solid #ffe5b3;
+}
+
+.zt-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.zt-info-item {
+    background: #f5f5f7;
+    padding: 20px;
+    border-radius: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.zt-info-item:hover {
+    background: #e8e8ed;
+}
+
+.zt-info-item.zt-status-online-full {
+    background: #d1f2e8;
+}
+
+.zt-info-item.zt-status-online-full:hover {
+    background: #b8e8d4;
+}
+
+.zt-info-item.zt-status-offline-full {
+    background: #ffd1d1;
+}
+
+.zt-info-item.zt-status-offline-full:hover {
+    background: #ffb8b8;
+}
+
+.zt-info-label {
+    font-size: 13px;
+    color: #86868b;
+    margin-bottom: 8px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.zt-info-value {
+    font-size: 17px;
+    color: #1d1d1f;
+    font-weight: 500;
+    word-break: break-all;
+    letter-spacing: -0.2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+}
+
+.zt-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.zt-status-online {
+    background-color: #d1f2e8;
+    color: #1d7a3d;
+}
+
+.zt-status-offline {
+    background-color: #ffd1d1;
+    color: #d1242f;
+}
+
+.zt-status-ok {
+    background-color: #d1f2e8;
+    color: #1d7a3d;
+}
+
+.zt-status-pending {
+    background-color: #ffe5b3;
+    color: #b95000;
+}
+
+.zt-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f7;
+}
+
+.zt-table th {
+    background-color: #f5f5f7;
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #86868b;
+    font-size: 13px;
+    letter-spacing: -0.1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+    border-bottom: 1px solid #e5e5ea;
+}
+
+.zt-table td {
+    padding: 16px;
+    border-bottom: 1px solid #e5e5ea;
+    color: #1d1d1f;
+    font-size: 15px;
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.zt-table tr:last-child td {
+    border-bottom: none;
+}
+
+.zt-table tr:hover td {
+    background-color: #fafafa;
+}
+
+.zt-form-group {
+    margin-bottom: 24px;
+}
+
+.zt-form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #1d1d1f;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.zt-form-input {
+    width: 100%;
+    max-width: 420px;
+    padding: 12px 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 10px;
+    font-family: 'SF Mono', 'Monaco', 'Menlo', monospace;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    background: white;
+    color: #1d1d1f;
+    letter-spacing: 0.5px;
+}
+
+.zt-form-input:focus {
+    outline: none;
+    border-color: #007AFF;
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+}
+
+.zt-form-input::placeholder {
+    color: #86868b;
+}
+
+.zt-form-input.zt-input-error {
+    border-color: #ff3b30 !important;
+    box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.1) !important;
+    animation: shake 0.3s ease;
+}
+
+.zt-form-input.zt-input-error:focus {
+    border-color: #ff3b30 !important;
+    box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.1) !important;
+}
+
+.zt-form-input.zt-input-success {
+    border-color: #34c759 !important;
+    box-shadow: 0 0 0 4px rgba(52, 199, 89, 0.1) !important;
+}
+
+.zt-form-input.zt-input-success:focus {
+    border-color: #34c759 !important;
+    box-shadow: 0 0 0 4px rgba(52, 199, 89, 0.1) !important;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.zt-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+    margin-left: 12px;
+}
+
+.zt-btn-primary {
+    background-color: #007AFF;
+    color: white;
+}
+
+.zt-btn-primary:hover {
+    background-color: #0051d5;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+.zt-btn-primary:active {
+    transform: translateY(0);
+}
+
+.zt-btn-primary:disabled {
+    background-color: #d2d2d7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.zt-btn-danger {
+    background-color: #ff3b30;
+    color: white;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.zt-btn-danger:hover {
+    background-color: #d1242f;
+    transform: translateY(-1px);
+}
+
+.zt-btn-link {
+    background-color: #f5f5f7;
+    color: #007AFF;
+    padding: 8px 16px;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+}
+
+.zt-btn-link:hover {
+    background-color: #e8e8ed;
+    transform: translateY(-1px);
+}
+
+.zt-quick-links {
+    background: #f5f5f7;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 32px;
+}
+
+.zt-quick-links a {
+    color: #007AFF;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: opacity 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.zt-quick-links a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.zt-code {
+    background-color: #f5f5f7;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: 'SF Mono', 'Monaco', 'Menlo', monospace;
+    font-size: 13px;
+    color: #007AFF;
+    letter-spacing: 0.3px;
+}
+
+.zt-note {
+    font-size: 13px;
+    color: #86868b;
+    line-height: 1.5;
+    margin-top: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.zt-form-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.zt-link {
+    color: #007AFF;
+    text-decoration: none;
+}
+
+.zt-link:hover {
+    text-decoration: underline;
+}
+
+.zt-quick-links-title {
+    color: #1d1d1f;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.zt-quick-links-divider {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5ea;
+}
+
+.zt-table-cell-monospace {
+    font-family: 'SF Mono', 'Monaco', 'Menlo', monospace;
+    font-size: 12px;
+}
+
+.zt-ip-not-assigned {
+    color: #999;
+}
+
+.zt-page-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0 0 32px 0;
+    letter-spacing: -0.4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+}
+
+.zt-code-block {
+    background-color: #f5f5f7;
+    border: 1px solid #e5e5ea;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+    font-family: 'SF Mono', 'Monaco', 'Menlo', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #1d1d1f;
+}
+
+.zt-code-block pre {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre;
+    overflow: visible;
+}
+
+.zt-code-block code {
+    background: none;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre;
+    display: block;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: #000000 !important;
+        color: #f5f5f7 !important;
+    }
+    body, body > *, #pageWrapper, #pageContent {
+        background-color: #000000 !important;
+    }
+    .zt-container {
+        background-color: transparent !important;
+    }
+    .zt-card {
+        background: #1d1d1f;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .zt-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .zt-section-title,
+    .zt-subsection-title,
+    .zt-subsection-title-small {
+        color: #f5f5f7;
+    }
+    
+    .zt-info-item {
+        background: #2c2c2e;
+    }
+    
+    .zt-info-item:hover {
+        background: #3a3a3c;
+    }
+    
+    .zt-info-item.zt-status-online-full {
+        background: #1d4d2e;
+    }
+    
+    .zt-info-item.zt-status-online-full:hover {
+        background: #2a6b3f;
+    }
+    
+    .zt-info-item.zt-status-offline-full {
+        background: #4d1d1d;
+    }
+    
+    .zt-info-item.zt-status-offline-full:hover {
+        background: #6b2a2a;
+    }
+    
+    .zt-info-label {
+        color: #98989d;
+    }
+    
+    .zt-info-value {
+        color: #f5f5f7;
+    }
+    
+    .zt-table {
+        background: #2c2c2e;
+    }
+    
+    .zt-table th {
+        background-color: #2c2c2e;
+        color: #98989d;
+        border-bottom-color: #3a3a3c;
+    }
+    
+    .zt-table td {
+        background: #1d1d1f;
+        color: #f5f5f7;
+        border-bottom-color: #3a3a3c;
+    }
+    
+    .zt-table tr:hover td {
+        background-color: #2c2c2e;
+    }
+    
+    .zt-form-input {
+        background: #ffffff;
+        border-color: #d2d2d7;
+        color: #1d1d1f;
+    }
+    
+    .zt-form-input:focus {
+        border-color: #007AFF;
+        box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+    }
+    
+    .zt-form-input::placeholder {
+        color: #86868b;
+    }
+    
+    .zt-quick-links {
+        background: #2c2c2e;
+    }
+    
+    .zt-quick-links-title {
+        color: #f5f5f7;
+    }
+    
+    .zt-quick-links-divider {
+        border-top-color: #3a3a3c;
+    }
+    
+    .zt-code {
+        background-color: #2c2c2e;
+        color: #64d2ff;
+    }
+    
+    .zt-code-block {
+        background-color: #2c2c2e;
+        border-color: #3a3a3c;
+        color: #f5f5f7;
+    }
+    
+    .zt-note {
+        color: #98989d;
+    }
+    
+    .zt-ip-not-assigned {
+        color: #636366;
+    }
+    
+    .zt-paragraph,
+    p {
+        color: #f5f5f7 !important;
+    }
+    
+    .zt-page-title {
+        color: #f5f5f7;
+    }
+}
+
+/* Suppress source map warnings */
+/*# sourceMappingURL= */
+

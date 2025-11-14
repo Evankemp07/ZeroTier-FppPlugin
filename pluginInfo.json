@@ -1,0 +1,26 @@
+{
+	"repoName": "fpp-plugin-ZeroTier",
+	"name": "ZeroTier Network Manager",
+	"author": "Evan Kemp",
+	"description": "ZeroTier setup and management plugin for FPP. Easily connect your Raspberry Pi to ZeroTier networks and manage network connections through the FPP web interface.",
+	"homeURL": "https://github.com/Evankemp07/ZeroTierFpp",
+	"srcURL": "https://github.com/Evankemp07/ZeroTierFpp.git",
+	"bugURL": "https://github.com/Evankemp07/ZeroTierFpp/issues",
+	"allowUpdates": 1,
+	"versions": [
+		{
+			"minFPPVersion": "9.0",
+			"maxFPPVersion": "0",
+			"branch": "master",
+			"sha": "",
+			"dependencies": {
+			    "plugins": [
+			    ],
+			    "packages": [
+			    ],
+				"scripts": [
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,13 @@
+[
+{ "name": "ZeroTier - Show Network Info",
+  "script": "info.sh",
+  "args": [
+  ]
+},
+{ "name": "ZeroTier - Join Network",
+  "script": "join.sh",
+  "args": [
+    { "name": "Network ID", "type": "text", "default": "" }
+  ]
+}
+]
