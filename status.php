@@ -194,6 +194,34 @@ if (file_exists($cssFile)) {
             background: #1d1d1f !important;
         }
     }
+    
+    /* Mobile table scrolling */
+    #networks-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-left: -24px;
+        margin-right: -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+    #networks-container .zt-table {
+        min-width: 700px;
+        width: 100%;
+    }
+    
+    @media (max-width: 768px) {
+        #networks-container {
+            margin-left: -24px;
+            margin-right: -24px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        
+        #networks-container .zt-table {
+            min-width: 800px;
+        }
+    }
 </style>
 
 <div class="zt-container">
